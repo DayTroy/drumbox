@@ -1,23 +1,37 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 #drum-machine{
+  margin: 10rem auto;
+  padding: 2rem;
+  text-align: center;
   display: flex;
-  background-color: #d52727;
-  align-items: center;
+  justify-content: space-around;
+  background-color: #EAD637;
   padding: 3rem;
+  width: 50rem;
+  border-radius: 2rem;
 }
 
-.drum-keyboard{
+.drum-keyboard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem 1rem;
 }
 
 .drum-controller{
-  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.drum-pad{
+  width: 5rem;
+  height: 5rem;
 }
