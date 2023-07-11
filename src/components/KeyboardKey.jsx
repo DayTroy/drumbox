@@ -1,11 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Button from 'react-bootstrap/Button';
 
-const KeyboardKey = ({play, sound: {key, url}}) => {  
+const KeyboardKey = ({play, sound: {key, url, keyCode}}) => {  
+
+  const handleKeyDown = (event) => {
+    if(event.keyCode === keyCode){
+      play(key)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown)
+  }, [])  
+
   return (
-    <button className='drum-pad' onClick={() => play(key)}>
-        <audio className='clip' id={key} src={url}></audio>
+    <Button className='drum-pad' variant="dark" onClick={() => play(key)}>
+      <audio className='clip' id={key} src={url}></audio>
         {key}
-    </button>
+    </Button>
   )
 }
 

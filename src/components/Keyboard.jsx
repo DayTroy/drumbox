@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import KeyboardKey from './KeyboardKey';
 
-const firstSoundsGroup = [
+export const firstSoundsGroup = [
     {
       keyCode: 81,
       key: 'Q',
@@ -58,7 +58,7 @@ const firstSoundsGroup = [
     }
   ];
 
-const secondSoundsGroup = [
+export const secondSoundsGroup = [
     {
       keyCode: 81,
       key: 'Q',
@@ -115,8 +115,22 @@ const secondSoundsGroup = [
     }
 ];
 
-const Keyboard = ({play}) => {  
-  return firstSoundsGroup.map((sound) => <KeyboardKey play={play} sound ={sound}/>)
+export const soundsName = {
+  heaterKit: 'Heater Kit',
+  smoothPianoKit: 'Smooth Piano Kit'
+}
+
+export const soundsGroup = {
+  heaterKit: firstSoundsGroup,
+  smoothPianoKit: secondSoundsGroup
+}
+
+const Keyboard = ({play, sounds}) => {  
+  return (
+    <div className='drum-keyboard'>
+      {sounds.map((sound) => <KeyboardKey key={sound.key} play={play} sound ={sound}/>)}
+    </div>
+  )
 }
 
 export default Keyboard

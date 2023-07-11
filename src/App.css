@@ -5,7 +5,19 @@
   text-align: center;
 }
 
-.drum-pad{
-  background-color: blue;
+#drum-machine{
   display: flex;
+  background-color: #d52727;
+  align-items: center;
+  padding: 3rem;
+}
+
+.drum-keyboard{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem 1rem;
+}
+
+.drum-controller{
+  margin-left: 5rem;
 }
