@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import KeyboardKey from './KeyboardKey';
 
 const firstSoundsGroup = [
     {
@@ -115,12 +116,7 @@ const secondSoundsGroup = [
 ];
 
 const Keyboard = ({play}) => {  
-  return firstSoundsGroup.map(sound => {
-    return <button className='drum-pad' onClick={() => play(sound.key)}>
-        <audio className='clip' id={sound.key} src={sound.url}></audio>
-        {sound.key}
-    </button>
-  })
+  return firstSoundsGroup.map((sound) => <KeyboardKey play={play} sound ={sound}/>)
 }
 
 export default Keyboard
