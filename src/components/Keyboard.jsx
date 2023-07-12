@@ -124,12 +124,20 @@ export const soundsGroup = {
   smoothPianoKit: secondSoundsGroup,
 };
 
-const Keyboard = ({power, play, sounds }) => {
+const Keyboard = ({ power, play, sounds }) => {
   return (
     <div className="drum-keyboard">
-      { power 
-        ? sounds.map((sound) => <KeyboardKey key={sound.key} play={play} sound={sound} /> )
-        : sounds.map((sound) => <KeyboardKey key={sound.key} play={play} sound={{...sound, url: "#"}} /> )}
+      {power
+        ? sounds.map((sound) => (
+            <KeyboardKey key={sound.key} play={play} sound={sound} />
+          ))
+        : sounds.map((sound) => (
+            <KeyboardKey
+              key={sound.key}
+              play={play}
+              sound={{ ...sound, url: "#" }}
+            />
+          ))}
     </div>
   );
 };
