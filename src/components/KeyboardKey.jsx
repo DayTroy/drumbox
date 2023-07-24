@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Button from "react-bootstrap/Button";
+import "./KeyboardKey.css";
 
 const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
   const handleKeyDown = (event) => {
