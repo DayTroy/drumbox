@@ -22,4 +22,6 @@ npm run dev
 • Bootstrap: A CSS framework that provides a collection of pre-designed components and styles for creating responsive and mobile-first websites and web applications. It offers a grid system, typography, forms, navigation components, and much more. Bootstrap simplifies the process of building visually appealing and consistent user interfaces by providing ready-made components that can be easily customized.
 
 • Vite: A fast and minimalist build tool for modern web development. It offers a lightning-fast dev server, instant hot module replacement (HMR), and optimized production builds.
+
+• Netlify: A fully-integrated platform for frontend developers to deploy and scale modern web applications.
     
